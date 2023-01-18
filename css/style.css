@@ -1,0 +1,50 @@
+body {
+    background: rgb(24, 34, 39);
+}
+.content_circle {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    /*
+    animation-name: white_circle;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: -1.5s;
+    animation-fill-mode: forwards;
+    */
+
+    animation: white_circle 2s linear infinite alternate 0s forwards, red_circle 2s linear infinite alternate 0s forwards;
+}
+
+.content:hover .content_circle {
+    animation-play-state: paused;
+}
+
+@keyframes white_circle {
+    0%{
+        left: 0;
+    }
+    50%{
+        border-radius: 0;
+    }
+    100%{
+        left: 500px;
+    }
+}
+
+@keyframes red_circle {
+    0%{
+        background-color: #fff;
+    }
+    50%{
+        background-color: red;
+    }
+    100%{
+        background-color: #fff;
+    }
+}
